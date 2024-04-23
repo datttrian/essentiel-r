@@ -1,0 +1,18 @@
+{
+    "name": "Default Linux Universal",
+    "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "GitHub.copilot",
+                "streetsidesoftware.code-spell-checker",
+                "DavidAnson.vscode-markdownlint"
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/rocker-org/devcontainer-features/r-apt:0": {},
+        "ghcr.io/rocker-org/devcontainer-features/pandoc:1": {}
+    },
+    "postCreateCommand": "R -e 'install.packages(c(\"reticulate\", \"rmarkdown\"), repos=\"https://cloud.r-project.org\")'"
+}
